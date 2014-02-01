@@ -8,17 +8,26 @@ from django.core.context_processors import csrf
 from forms import MyRegistrationForm
 from django.contrib.auth.decorators import login_required
 #models
-
+from simple_salesforce import Salesforce
+import json
 def index(request):
 	if not request.user.is_anonymous():
 		return HttpResponseRedirect("/loggedin")
 	else:
 		c = {}
 		c.update(csrf(request))
-		form = MyRegistrationForm()
-		form.fields['password1'].label = "密码"
-		form.fields['password2'].label = "再次输入密码"
-		c["form"] = form
+		sf = Salesforce(username='whatsupsj@gmail.com', password='Junkmail1!', security_token='GxJyxvdyKRkWqIySzha8w7xT')
+		contact = sf.query("SELECT Id, CloseDate, CreatedDate, Amount FROM Opportunity")
+		records = contact["records"]
+		i,a,t,close = [],[],[],[]
+		for item in records:
+			i.append(item["Id"])
+			a.append(item["Amount"])
+			close.append(item["CloseDate"])
+			t.append(item["CreatedDate"])		
+		
+		lst = [{'ID': d[0], 'Amount': d[1], 'CloseDate': d[2], 'CreatedDate': d[3]} for d in zip(i, a, close, t)]
+		c['contact'] = lst
 		return render_to_response('index.html', c)
 
 def auth_view(request):

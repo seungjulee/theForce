@@ -6,7 +6,9 @@
 	<p class="error">不好意思，用户名或者密码不正确</p>
 {% endif %}
 
-
+{%for item in contact%}
+  <p>{{item.ID}}&nbsp;{{item.Amount}}&nbsp;{{item.CreatedDate}}&nbsp;{{item.CloseDate}}</p>
+{%endfor%}
 
 <div class="modal fade" id="videoModal" style="display:none;" aria-hidden="true">
   <div class="modal-dialog">
@@ -35,7 +37,9 @@
 {% endif %}
 <form action="/auth/" method="POST">{% csrf_token %}
 <div class="form-group">
-  <label for="username">用户名:</label>
+  <label for="username">
+
+  </label>
   <input type="text" name="username" class="form-control" placeholder="用户名／邮箱" id="username">
 </div>
 <div class="form-group">

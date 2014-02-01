@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang='zh-Hans' charset='utf-8'>
+<html lang='en' charset='utf-8'>
 {% block head %}
 <head>
   <meta name =”viewport” content=”width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no”>
@@ -14,31 +14,6 @@
   <script type="text/javascript" src="{% static 'meetings/js/jquery-ui-1.10.3.custom.js' %}"></script>
   <script type='text/javascript' src="{% static 'meetings/js/jQuery-UI-Resizable-Snap-extension.js' %}"></script>  
   <script type="text/javascript" src="{% static 'meetings/js/bootstrap.min.js' %}"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-  $("#ajaxTest").keyup(function(){
-
-      $.ajax({
-          type: "POST",
-          url: "/loggedin/ajaxTest/",
-          data: { 
-              "testMessage": $("#ajaxTest").val(),
-              "csrfmiddlewaretoken": $("input[name=csrfmiddlewaretoken]").val(),
-          },
-          success: testSuccess,
-          dataType: "html",
-
-      });
-
-  });
-
-});
-  var testSuccess = function(data, textStatus)
-  {
-    $("#ajaxTestResult").html(data);
-  };
-</script>
   <!--BOOTSTRAP-->
 
 </head>

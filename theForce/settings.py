@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'salesforce',
 )
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -90,9 +91,22 @@ DATABASES = {
 'default':{
     'ENGINE': 'django.db.backends.sqlite3',
     'NAME': 'mydb',
-}
+},
+
+'salesforce':{
+    'ENGINE': 'salesforce.backend',
+    "CONSUMER_KEY" : '3MVG9A2kN3Bn17huXp3x6eQ5zPXCdEHZCt.clSy1TyK0yJbDV_8H1wn.dfAa_d60qyvihVgtiXVdgkwensNG9',
+    "CONSUMER_SECRET" : '7783134933470171276',
+    'USER': 'duzhangtech',
+    'PASSWORD': 'Starcraft2',
+    'HOST': 'https://test.salesforce.com',
 }
 
+}
+DATABASE_ROUTERS = [
+    "salesforce.router.ModelRouter"
+    ]
+SALESFORCE_DB_ALIAS = 'salesforce'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
