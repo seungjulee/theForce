@@ -1,0 +1,136 @@
+/*GLOBAL SETTINGS*/
+body{
+    background-color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #888;
+}
+a:hover{
+    text-decoration: none;
+}
+.hyperLink{
+    color: #888;
+    selection: none;
+    -moz-selection: none;
+    -webkit-selection: none;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    list-style: none;
+}
+input{
+    z-index: 199999;
+}
+.removeMargin{
+    margin-top: 0px;
+}
+.submit{
+    width: 10%;
+}
+
+/*SIDE BAR*/
+/*******************************************************/
+
+/*ORGANIZER PAGE*/
+/*******************************************************/
+#addInvitee{
+    margin-top: 10px; 
+    margin-right: 10px;
+    height: 80%; 
+    width: 120px;
+}
+.organizerPageTimeTag{
+    max-width: 100px;
+    text-align: right;
+    background-color: #eee;
+    border: 2px solid white;
+}
+/*NAV BAR*/
+/*******************************************************/
+.navbar>.container .navbar-brand:hover{
+    color: #fff;
+}
+.whitify{
+    color: white;
+}
+.dividerSpace{
+    width: 100%;
+    height: 1px;
+    color: transparent;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 10px 0px 5px -2px #23aeff ;
+        -moz-box-shadow: 10px 0px 5px -2px #23aeff ;
+}
+.navbar-brand{
+    font-size: 35px;
+    width: 6.2em;
+    color: #000;
+    background-color: transparent;
+    margin-top: -2px;
+
+}
+.navbar>.container .navbar-brand{
+    margin-left: 10px;
+}
+.navbar-default .navbar-text{
+    color:white;
+}
+
+.navbar-default .navbar-brand{
+    color: #fff;   
+}
+.navbar-default{
+}
+#loginWarning{
+    position: relative;
+
+}
+/*CONTENT*/
+/*******************************************************/
+.container{
+    width: 100%;
+}
+.symbol{
+    font-size: 3em;
+    color: #329D27;
+}
+/*CREATE PAGE*/
+.outline{
+    outline: 2px solid #ccc;
+    outline-offset: 2em;
+}
+.pageTop{
+    margin-top: 5%;
+}
+.rowMargin{
+    margin-left: 2%;
+}
+.scopeSwitch{
+    color: #7080D7;
+}
+/*BASE TEMPLATE*/
+.modal{
+    z-index: 10001;{% extends "dashboard.html"%}
+}
+#topBar{
+background: #081073; /* Old browsers */
+background: -moz-linear-gradient(top,  #081073 0%, #181f72 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#081073), color-stop(100%,#181f72)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #081073 0%,#181f72 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #081073 0%,#181f72 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #081073 0%,#181f72 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #081073 0%,#181f72 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081073', endColorstr='#181f72',GradientType=0 ); /* IE6-9 */
+
+}
+#sideBar{
+margin-top: -20px;
+padding-top: 20px;
+background-color: white;
+-webkit-box-shadow: 2px 0px 4px -1px #888 ;
+-moz-box-shadow: 2px 0px 4px -1px #888 ;
+height: 60em;
+}

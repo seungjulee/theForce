@@ -1,0 +1,248 @@
+/*disable selection in chrome*/
+#col_1
+{
+    left: 0%;
+
+}
+#col_2
+{
+    left: 14.785714%;
+}
+#col_3
+{
+    left: 29.571428%;
+
+}
+#col_4
+{
+    left: 44.357142%;
+
+}
+#col_5
+{
+    left: 59.142856%;
+
+}
+#col_6
+{
+    left: 73.928571%;
+
+}
+#col_7
+{
+    left: 88.714284%;
+}
+.calCol{
+    height: 100%;
+    width: 14%;  
+    z-index: 9000;  
+    background-color:  black;
+    position: absolute;
+    opacity: 0;
+}
+
+.avail_time{
+    position: absolute;
+    z-index: 10000;
+    opacity: 0.5;
+    background-color: lawngreen;
+    border-style: solid;
+    border-color: darkcyan;
+    border-width: 2px;
+    min-height: 2.63157895%;
+}
+.unavailable{
+    background-color: red;
+}
+
+.selectedTime{
+    position: absolute;
+    z-index: 10000;
+    opacity: 0.9;
+    background-color: green;
+    border-style: solid;
+    border-color: darkcyan;
+    border-width: 2px;
+    min-height: 2.63157895%;
+}
+#container{
+    width: 100%;   /* 2000 px*/
+    max-width: 125em;
+    height: 100%;
+    margin: auto;
+    font-size: 1em;
+    position: relative;
+}
+#scheduleUIwrapper{
+    position: relative;
+    width:70em;
+    top: 120%;
+    height: 40em;
+}
+#dateWrapper{
+    position: absolute;
+    width: 100%;
+    left: 12%;
+    top: 0%;
+    font-size: 1em;
+}
+#scopeLeft{
+    float: left;
+    position: absolute;
+    left: -4%;
+    margin-top: 2.2%;
+}
+#scopeRight{
+    float: right;
+    position: absolute;
+    right: -4%;
+    margin-top: 1.5%;
+    padding: 0.3% 1% 0.3% 1%;
+}
+.dateSpacer{
+    position: absolute;
+}
+#dateSpacer_1{left: 0%;}
+#dateSpacer_2{left: 14.5%;}
+#dateSpacer_3{left: 29%;}
+#dateSpacer_4{left: 43.5%;}
+#dateSpacer_5{left: 58%;}
+#dateSpacer_6{left: 72.5%;}
+#dateSpacer_7{left: 87%;}
+
+.datesForData{
+    position: absolute;
+    margin-top: -0.5%;
+}
+#datesForData_1{left: 0%;}
+#datesForData_2{left: 14.5%;}
+#datesForData_3{left: 29%;}
+#datesForData_4{left: 43.5%;}
+#datesForData_5{left: 58%;}
+#datesForData_6{left: 72.5%;}
+#datesForData_7{left: 87%;}
+
+.dataCarrier{
+    position: relative;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.trashcan{
+    position: absolute;
+    font-size: 1.6em;
+    top: -0.2em;
+    margin-left: 0.85em;
+    z-index: 99999;
+}
+#scrollWindow{
+    position: relative;
+    left:5%;
+    top: 7%;
+    width: 110%;
+    height:80%;
+    overflow: auto;
+}
+#clockWrapper{
+    position: absolute;
+    top:-1.5%;
+    left:-7%;
+}
+#clockTime{
+    margin-bottom: 95%;
+    text-align: right;
+}
+#CalWrapper{
+    position: absolute;
+    width: 91%;   /* 1600 px*/
+    max-width: 100em;
+    height: 62.5em;
+    margin: auto;
+    left: 6%;
+    top: 1%;
+    font-size: 1em;
+}
+#formWrapper{
+    position: absolute;
+    min-height: 20%;
+    width: 100%;
+    font-size:1em;
+    left: 4%;
+    bottom: 69%;
+}
+.lines{
+    z-index: 500;
+    width: 100%;
+    height: 1px;
+    background-color: #bbb;
+    position: absolute;
+}
+.lines_row{
+    z-index: 501;
+    width: 1px;
+    height: 98%;
+    background-color: #bbb;
+    position: absolute;
+}
+.bold_lines{
+    z-index: 1000;
+    width: 100%;
+    height: 2px;
+    background-color: #888;
+    position: absolute;
+}
+
+/*invite page*/
+#scheduleUIwrapperInvite{
+    position: relative;
+    width:70em;
+    top: 4em;
+    height: 40em;
+}
+/*#createAcct{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 20%;
+    left: 20%;
+    background-color: white;
+    z-index: 99999999;
+    display: none;
+}
+#createAcctCover{
+    position: absolute; 
+    display: none;
+    width: 100%; 
+    height: 100%; 
+    background-color: lightgrey;
+    z-index: 99999;
+    opacity: 0.6;
+}
+.greenWrap{
+        border: 1px solid lightgreen;
+        border-spacing: 50%;
+        border-radius: 5px;
+}
+/*organize page*/
+.availChoice{
+    background-color: lawngreen;
+    text-align: center;
+    border: 2px solid white;
+}
+.unavailChoice{
+    background-color: lightgrey;
+    text-align: center;
+    border: 2px solid white;
+}
+.choiceBG{
+    background-color: #eee;
+    border: 2px solid white;
+}
+.Answered{
+    font-weight: 700;
+}
+.unAnswered{
+
+}
+.best{
+    background-color: lawngreen;
+}
